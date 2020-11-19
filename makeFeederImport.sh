@@ -2,8 +2,8 @@
 
 rm feeder.opml || printf "feeder.opml is not in dir. It will be created later on"
 
-unzip *.zip
-
+unzip -q *.zip
+printf "\nyour data was unpacked\nit will be deleted when the script is finished"
 #declare -a id_Array
 id_Array=()
 #printf "id_Array = "${id_Array[*]}
@@ -11,27 +11,21 @@ id_Array=()
 while IFS=  read -r line
 do
 	if [[ "$line" == *"accountId"* ]]; then
-    	#echo "$line"
     	read -rasplitIFS<<< "$line"
-
     	for word in "${splitIFS[@]}"; do
-			#echo $word
 			if [[ "$word" != *"accountId"* ]]; then
 				if [[ "$word" != ":" ]]; then
 					prefix='"'
 					suffix='",'
 					splitted=${word#"$prefix"}
 					splitted=${splitted%"$suffix"}
-					#echo $word
 					username=$(curl --silent -d 'input='$splitted -X POST https://tweeterid.com/ajax.php)
 					#if [[ "&username" == "error" ]]; then
 					#	#end all
 					#fi
-
 					printf "\n"$splitted": "$username
 					
-					id_Array+=$username
-					#printf " "${id_Array[*]}		
+					id_Array+=$username	
 				fi
 			fi
 		done
@@ -56,7 +50,6 @@ echo "<body>" >> feeder.opml
 
 for user in $users
 do
-	#printf "https://nitter.nixnet.services/" $user "/rss"
 	echo '<outline title="'$user'" text="@'$user'" type="rss" xmlUrl="https://nitter.nixnet.services/'$user'/rss"/>' >> feeder.opml
 done
 
@@ -67,8 +60,4 @@ rm -r data
 rm -r assets
 rm Your\ archive.html
 
-printf "\nfeeder.opml is ready\nimport it in your feeder app\n"
-
-#curl -d 'input=20463983' -X POST https://tweeterid.com/ajax.php
-
-#curl -d 'input='$1 -X POST https://tweeterid.com/ajax.php
+printf "\n\nfeeder.opml is ready\nimport it in your feeder app\n"
