@@ -7,5 +7,3 @@ for this script to work you need the following things:
 - a download of your twitter data (.zip)
 
 also you will need to install the feeder app on your mobile phone. Without it this script is somewhat useless. 
-
-does this work?
