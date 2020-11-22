@@ -2,8 +2,8 @@
 
 rm feeder.opml || printf "feeder.opml is not in dir. It will be created later on"
 
-unzip -q *.zip
-printf "\nyour data was unpacked\nit will be deleted when the script is finished"
+unzip -q *.zip || printf "package 'unzip' not found. Please install it on your system with 'apt install unzip'"
+printf "\nyour data was unpacked\nit will be deleted when the script is finished\n"
 #declare -a id_Array
 id_Array=()
 #printf "id_Array = "${id_Array[*]}
@@ -24,8 +24,7 @@ do
 					#	#end all
 					#fi
 					printf "\n"$splitted": "$username
-					
-					id_Array+=$username	
+					id_Array+=$username
 				fi
 			fi
 		done
