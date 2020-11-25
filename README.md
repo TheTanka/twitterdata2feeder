@@ -1,5 +1,5 @@
 ## twitterdata2feeder
-this is a small bash script that creates a ***feeder.opml*** file from your [twitter data](https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive), which you can then import into the [feeder app](https://gitlab.com/spacecowboy/Feeder).
+this is a small bash script that creates a ***feeder.opml*** file from your [twitter data](https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive), which you can then import into the [feeder app](https://gitlab.com/spacecowboy/Feeder). It uses the rss feed function from [nitter](https://nitter.net/) with wich you can create a rss feed from every public twitter account.
 
 #### Dependencies:
 for this script to work you need the following things:
