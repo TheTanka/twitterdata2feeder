@@ -2,7 +2,7 @@
 
 rm feeder.opml || printf "feeder.opml is not in dir. It will be created later on\n"
 
-unzip -q *.zip || printf "\n\e[31mError: package 'unzip' not found. Please install it on your system with 'apt install unzip'\n" && exit 1
+unzip -q *.zip || (printf "\n\e[31mError: package 'unzip' not found. Please install it on your system with 'apt install unzip'\n" && exit 1)
 printf "\nyour data was unpacked\nit will be deleted when the script is finished\n"
 #declare -a id_Array
 id_Array=()
@@ -25,6 +25,7 @@ do
 						exit 1
 					fi
 					printf "\n"$splitted": "$username
+
 					id_Array+=$username
 				fi
 			fi
@@ -60,4 +61,5 @@ rm -r data
 rm -r assets
 rm Your\ archive.html
 
-printf "\n\nfeeder.opml is ready\nimport it in your feeder app\n"
+printf "\n\nfeeder.opml is \e[32mready\e[0m\nyou can now import it to the feeder app\n"
+printf "find it on F-droid under 'https://f-droid.org/repository/browse/?fdid=com.nononsenseapps.feeder'\n"
