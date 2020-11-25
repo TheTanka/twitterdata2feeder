@@ -10,8 +10,7 @@ for this script to work you need the following things:
 also you will need to install the [feeder app](https://gitlab.com/spacecowboy/Feeder) on your mobile phone. Without it this script is somewhat useless. 
 
 #### Usage:
-under linux:
-
-if the script <code>makeFeederImport.sh</code> is not executable, make it executable with <code>chmod a+x makeFeederImport.sh</code>
-the execute it with <code>./makeFeederImport.sh</code>
+under linux:\n
+if the script <code>makeFeederImport.sh</code> is not executable, make it executable with <code>chmod a+x makeFeederImport.sh</code>\n
+then execute it with <code>./makeFeederImport.sh</code>
 
