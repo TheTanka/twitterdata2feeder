@@ -13,5 +13,5 @@ also you will need to install the [feeder app](https://gitlab.com/spacecowboy/Fe
 #### Usage:
 under linux:<br />
 if the script <code>makeFeederImport.sh</code> is not executable, make it executable with <code>chmod a+x makeFeederImport.sh</code><br />
-then execute it with <code>./makeFeederImport.sh</code>
-
+then execute it with <code>./makeFeederImport.sh</code><br />
+copy the *feeder.opml* to your smartphone and import it into the [feeder app](https://gitlab.com/spacecowboy/Feeder)
