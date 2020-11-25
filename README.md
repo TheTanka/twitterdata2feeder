@@ -4,7 +4,7 @@ this is a small bash script that creates a ***feeder.opml*** file from your [twi
 #### Dependencies:
 for this script to work you need the following things:
 - the unzip package installed on your mashine 
-    - for ubuntu/debian sudo apt install unzip
+    - for ubuntu/debian <code>sudo apt install unzip</code>
 - a download of your [twitter data](https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive) as "*.zip*"
 - a working internet connection
 
