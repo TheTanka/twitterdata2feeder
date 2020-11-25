@@ -11,6 +11,7 @@ also you will need to install the [feeder app](https://gitlab.com/spacecowboy/Fe
 
 #### Usage:
 under linux:
+
 if the script <code>makeFeederImport.sh</code> is not executable, make it executable with <code>chmod a+x makeFeederImport.sh</code>
 the execute it with <code>./makeFeederImport.sh</code>
 
